@@ -1,6 +1,5 @@
 # Implements the Maze ADT using a 2-D array.
 from arrays import Array2D
-from pprint import pprint
 
 class Maze :
     # Define constants to represent contents of the maze cells.
@@ -67,7 +66,6 @@ class Maze :
             lst[row][col] = 'o'
             if ((row < len(lst) - 1 and search(row + 1, col)) or (col > 0 and search(row, col - 1))
                 or (row > 0 and search(row - 1, col)) or (col < len(lst) - 1 and search(row, col + 1))):
-                pprint(lst)
                 return True
             return False
 
